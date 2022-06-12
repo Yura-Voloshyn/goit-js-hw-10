@@ -15,7 +15,7 @@ refs.input.addEventListener('input', debounce(onNameInput, DEBOUNCE_DELAY));
 
 function onNameInput(e) {
   e.preventDefault();
-  const inputValue = e.target.value;
+  const inputValue = e.target.value.trim();
   if (!inputValue) {
     refs.countryList.innerHTML = '';
     refs.countryInfo.innerHTML = '';
